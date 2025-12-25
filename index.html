@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill a Bucket, Fill a Heart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+        }
+    </style>
+</head>
+<body class="p-6">
+
+    <div class="glass-card max-w-md w-full rounded-3xl p-10 text-center transition-all duration-300 hover:shadow-xl">
+        <!-- Icon/Visual Element -->
+        <div class="mb-6 flex justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#e11d48" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+            </svg>
+        </div>
+
+        <h1 class="text-4xl font-bold text-gray-800 mb-8 tracking-tight">
+            Fill a Bucket, Fill a Heart
+        </h1>
+
+        <p class="text-gray-600 mb-10 leading-relaxed">
+            Every small act of kindness fills someone's bucket and warms their heart. Click below to learn more and join our mission.
+        </p>
+
+        <button 
+            id="redirectBtn"
+            class="group relative w-full inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-200 bg-rose-500 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rose-500 hover:bg-rose-600 active:scale-95 shadow-lg shadow-rose-200"
+        >
+            Visit Our Website
+            <svg class="w-5 h-5 ml-2 transition-transform duration-200 group-hover:translate-x-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+        </button>
+
+        <div id="statusMessage" class="mt-4 text-sm text-gray-400 hidden italic">
+            Redirecting you now...
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('redirectBtn').addEventListener('click', function() {
+            const status = document.getElementById('statusMessage');
+            status.classList.remove('hidden');
+            
+            // Redirect to the provided link
+            window.location.href = "https://694d2f4054136.site123.me";
+        });
+    </script>
+</body>
+</html>
